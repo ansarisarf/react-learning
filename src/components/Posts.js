@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react';
+import {url} from '../api'
 
 function Posts(props){
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        const url = "http://localhost:5000/api/v1/post";
         const getPost = async() => {
             try{
-                const response = await fetch(url);
+                const response = await fetch(`${url}/post`);
                 const json = await response.json();
                 setPosts(json);
             }catch(error){

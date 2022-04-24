@@ -1,15 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import {url} from '../api'
 
 function Test(props) {
 
   const[data, setData] = useState([]);
 
   useEffect(() =>{
-    const url = "http://localhost:5000/api/v1/employee";
     const getData = async() => {
       try{
-        const response = await fetch(url);
+        const response = await fetch(`${url}/employee`);
         const json = await response.json();
         setData(json)
       }catch(error){

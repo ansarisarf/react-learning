@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import {url} from '../api'
 function AddEmployee(){
     const [employee, setEmployee] = useState({
         name: "",
@@ -16,8 +16,7 @@ function AddEmployee(){
     const onSubmit = e => {
         e.preventDefault();
 
-        const url = "http://localhost:3000/api/v1/employee";
-        fetch(url, {
+        fetch(`${url}/employee`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',

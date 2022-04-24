@@ -1,16 +1,13 @@
-import './App.css';
-import Navbar from './components/Navbar';
-import TextForm from './components/TextForm';
 import React, { useState } from 'react';
+import Navbar from './layouts/Navbar';
+import Menubar from './layouts/Menubar';
+import Dashboard from './components/Dashboard';
+import Footer from './layouts/Footer';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import Test from './components/Test';
-import Posts from './components/Posts';
-import Counter from './components/Counter';
-import AddEmployee from './components/AddEmployee';
 
 function App() {
   const [mode, setMode] = useState('light')
@@ -24,31 +21,25 @@ function App() {
     }
   }
   return (
-    <>
-      <Router>
-      <Navbar title="ShasLegacy" mode={mode} toggleMode={toggleMode}/>
-        <Switch>
-            <Route exact path="/">
-            <div className="container my-3">
-              <TextForm heading="Enter the text to analysis" mode={mode}/>
+      <div id="wrapper">
+
+        <Navbar title="Shashi Ojha" mode={mode} toggleMode={toggleMode}/>
+
+        <div id="content-wrapper" className="d-flex flex-column">
+
+            <div id="content">
+
+               <Menubar/>
+
+                <Dashboard/>
+
             </div>
-            </Route>
-            <Route exact path="/employee-data">
-              <Test  mode={mode} />
-            </Route>
-            <Route exact path="/posts">
-              <Posts heading = "All Post List"  mode={mode} />
-            </Route>
-            <Route exact path='/counter'>
-              <Counter/>
-            </Route>
-            <Route exact path ='/add-employee'>
-              <AddEmployee/>
-            </Route>
-          </Switch>
-      </Router>
-        
-    </>
+            <Footer/>
+
+        </div>
+
+    </div>
+
   );
 }
 
