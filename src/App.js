@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import Navbar from './layouts/Navbar';
 import Menubar from './layouts/Menubar';
-import Dashboard from './components/Dashboard';
 import Footer from './layouts/Footer';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import Routes from './route/Routes';
 
 function App() {
   const [mode, setMode] = useState('light')
@@ -22,21 +18,20 @@ function App() {
   }
   return (
       <div id="wrapper">
+        
+        <Router>   
 
-        <Navbar title="Shashi Ojha" mode={mode} toggleMode={toggleMode}/>
+          <Navbar title="Shashi Ojha" mode={mode} toggleMode={toggleMode}/>
+          <div id="content-wrapper" className="d-flex flex-column">
+              <div id="content">
+                <Menubar/>
+                  <Routes/>
+              </div>
+              <Footer/>
+          </div>   
 
-        <div id="content-wrapper" className="d-flex flex-column">
-
-            <div id="content">
-
-               <Menubar/>
-
-                <Dashboard/>
-
-            </div>
-            <Footer/>
-
-        </div>
+        </Router>
+        
 
     </div>
 

@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './layouts/Navbar';
+import Navbar from '../layouts/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react';
 import {
@@ -12,9 +12,9 @@ import Posts from './components/Posts';
 import Counter from './components/Counter';
 import AddEmployee from './components/AddEmployee';
 import Userdata from './components/Userdata';
-import Menubar from './layouts/Menubar';
-import Footer from './layouts/Footer';
-import Dashboard from './components/Dashboard';
+import Menubar from '../layouts/Menubar';
+import Footer from '../layouts/Footer';
+import Dashboard from '../components/Dashboard';
 
 function App() {
   const [mode, setMode] = useState('light')
