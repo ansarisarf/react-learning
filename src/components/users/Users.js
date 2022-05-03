@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {Helmet} from "react-helmet";
 
-const Userdata = () => {
+const Users = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
@@ -54,9 +54,10 @@ const Userdata = () => {
                                 </tr>
                             </tfoot>
                             <tbody>
-                                {data.map((user) => {
+                                {
+                                    data.map((user, index) => {
                                     return(
-                                        <tr key={user.id}>
+                                        <tr key = {index}>
                                             <td>{user.id}</td>
                                             <td>{user.name}</td>
                                             <td>{user.username}</td>
@@ -65,6 +66,7 @@ const Userdata = () => {
                                         </tr>
                                     )
                                 })}
+                                
                             </tbody>
                         </table>
                     </div>
@@ -84,4 +86,4 @@ const Userdata = () => {
 
 }
 
-export default Userdata
+export default Users
