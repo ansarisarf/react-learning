@@ -78,6 +78,12 @@ export default function Navbar(props) {
             </li>
 
             <li className="nav-item">
+                <Link className="nav-link" to="/all-tickets">
+                    <i className="fas fa-fw fa-clipboard-check"></i>
+                    <span>Tickets</span></Link>
+            </li>
+
+            <li className="nav-item">
                 <a className="nav-link" href="charts.html">
                     <i className="fas fa-fw fa-user"></i>
                     <span>Users</span></a>

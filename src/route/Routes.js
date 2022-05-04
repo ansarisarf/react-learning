@@ -9,6 +9,8 @@ import Users from '../components/users/Users';
 import Posts from '../components/posts/Posts';
 import Login from '../components/auth/Login';
 import ForgotPassword from '../components/auth/ForgotPassword';
+import { AllTickets } from '../components/tickets/AllTickets';
+import { Addticket } from '../components/tickets/Addticket';
 
 export default function Routes() {
 
@@ -37,7 +39,7 @@ export default function Routes() {
         }
         console.log(email, password)
     }
-    
+
     const handleOnResetSubmit = (e) => {
         e.preventDefault()
         if (!email) {
@@ -82,6 +84,12 @@ export default function Routes() {
             </Route>
             <Route exact path = "/using-axios" >
                 <Users heading="Using Axios"/>
+            </Route>
+            <Route exact path = "/all-tickets">
+                <AllTickets heading="All Tickets"/>
+            </Route>
+            <Route exact path = "/add-new-ticket">
+                <Addticket heading = "Add New Ticket" />
             </Route>
         </Switch>
   )
