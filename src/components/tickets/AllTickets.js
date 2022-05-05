@@ -54,6 +54,7 @@ export const AllTickets = (props) => {
                                         <th>Subject</th>
                                         <th>Status</th>
                                         <th>Added Date</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
@@ -62,6 +63,7 @@ export const AllTickets = (props) => {
                                         <th>Subject</th>
                                         <th>Status</th>
                                         <th>Added Date</th>
+                                        <th>Action</th>
                                     </tr>
                                 </tfoot>
                                 <tbody>
@@ -73,6 +75,10 @@ export const AllTickets = (props) => {
                                         <td>{item.subject}</td>
                                         <td>{item.status}</td>
                                         <td>{item.addedAt}</td>
+                                        <td>
+                                            <Link className='btn btn-sm btn-outline-info mx-1' to={`/ticket/${item.id}`}>View <i className="fas fa-fw fa-eye"></i></Link>
+                                            <Link className='btn btn-sm btn-outline-danger' to="/#">Remove <i className="fas fa-fw fa-trash"></i></Link>
+                                        </td>
                                     </tr>
                                     ) 
                                     })):(

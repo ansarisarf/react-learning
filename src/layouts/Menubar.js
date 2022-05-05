@@ -24,7 +24,7 @@ return (
                     <ul className="navbar-nav ml-auto">
 
                         <li className="nav-item dropdown no-arrow d-sm-none">
-                            <Link className="nav-link dropdown-toggle" to="#" id="searchDropdown" role="button"
+                            <Link className="nav-link dropdown-toggle" to="/#" id="searchDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i className="fas fa-search fa-fw"></i>
                             </Link>
@@ -46,7 +46,7 @@ return (
                         </li>
 
                         <li className="nav-item dropdown no-arrow mx-1">
-                            <Link className="nav-link dropdown-toggle" to="#" id="alertsDropdown" role="button"
+                            <Link className="nav-link dropdown-toggle" to="/#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i className="fas fa-bell fa-fw"></i>
                                 <span className="badge badge-danger badge-counter">3+</span>
@@ -56,7 +56,7 @@ return (
                                 <h6 className="dropdown-header">
                                     Alerts Center
                                 </h6>
-                                <Link className="dropdown-item d-flex align-items-center" to="#">
+                                <Link className="dropdown-item d-flex align-items-center" to="/#">
                                     <div className="mr-3">
                                         <div className="icon-circle bg-primary">
                                             <i className="fas fa-file-alt text-white"></i>
@@ -67,7 +67,7 @@ return (
                                         <span className="font-weight-bold">A new monthly report is ready to download!</span>
                                     </div>
                                 </Link>
-                                <Link className="dropdown-item d-flex align-items-center" to="#">
+                                <Link className="dropdown-item d-flex align-items-center" to="/#">
                                     <div className="mr-3">
                                         <div className="icon-circle bg-success">
                                             <i className="fas fa-donate text-white"></i>
@@ -78,7 +78,7 @@ return (
                                         $290.29 has been deposited into your account!
                                     </div>
                                 </Link>
-                                <Link className="dropdown-item d-flex align-items-center" to="#">
+                                <Link className="dropdown-item d-flex align-items-center" to="/#">
                                     <div className="mr-3">
                                         <div className="icon-circle bg-warning">
                                             <i className="fas fa-exclamation-triangle text-white"></i>
@@ -89,12 +89,12 @@ return (
                                         Spending Alert: We've noticed unusually high spending for your account.
                                     </div>
                                 </Link>
-                                <Link className="dropdown-item text-center small text-gray-500" to="#">Show All Alerts</Link>
+                                <Link className="dropdown-item text-center small text-gray-500" to="/#">Show All Alerts</Link>
                             </div>
                         </li>
 
                         <li className="nav-item dropdown no-arrow mx-1">
-                            <Link className="nav-link dropdown-toggle" to="#" id="messagesDropdown" role="button"
+                            <Link className="nav-link dropdown-toggle" to="/#" id="messagesDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i className="fas fa-envelope fa-fw"></i>
                                 <span className="badge badge-danger badge-counter">7</span>
@@ -104,7 +104,7 @@ return (
                                 <h6 className="dropdown-header">
                                     Message Center
                                 </h6>
-                                <Link className="dropdown-item d-flex align-items-center" to="#">
+                                <Link className="dropdown-item d-flex align-items-center" to="/#">
                                     <div className="dropdown-list-image mr-3">
                                         <img className="rounded-circle" src="assets/img/undraw_profile_1.svg"
                                             alt="..." />
@@ -116,7 +116,7 @@ return (
                                         <div className="small text-gray-500">Emily Fowler · 58m</div>
                                     </div>
                                 </Link>
-                                <Link className="dropdown-item d-flex align-items-center" to="#">
+                                <Link className="dropdown-item d-flex align-items-center" to="/#">
                                     <div className="dropdown-list-image mr-3">
                                         <img className="rounded-circle" src="assets/img/undraw_profile_2.svg"
                                             alt="..." />
@@ -128,7 +128,7 @@ return (
                                         <div className="small text-gray-500">Jae Chun · 1d</div>
                                     </div>
                                 </Link>
-                                <Link className="dropdown-item d-flex align-items-center" to="#">
+                                <Link className="dropdown-item d-flex align-items-center" to="/#">
                                     <div className="dropdown-list-image mr-3">
                                         <img className="rounded-circle" src="assets/img/undraw_profile_3.svg"
                                             alt="..." />
@@ -140,7 +140,7 @@ return (
                                         <div className="small text-gray-500">Morgan Alvarez · 2d</div>
                                     </div>
                                 </Link>
-                                <Link className="dropdown-item d-flex align-items-center" to="#">
+                                <Link className="dropdown-item d-flex align-items-center" to="/#">
                                     <div className="dropdown-list-image mr-3">
                                         < img className = "rounded-circle"
                                         src = "assets/img/undraw_profile.svg"
@@ -153,14 +153,14 @@ return (
                                         <div className="small text-gray-500">Chicken the Dog · 2w</div>
                                     </div>
                                 </Link>
-                                <Link className="dropdown-item text-center small text-gray-500" to="#">Read More Messages</Link>
+                                <Link className="dropdown-item text-center small text-gray-500" to="/#">Read More Messages</Link>
                             </div>
                         </li>
 
                         <div className="topbar-divider d-none d-sm-block"></div>
 
                         <li className="nav-item dropdown no-arrow">
-                            <Link className="nav-link dropdown-toggle" to="#" id="userDropdown" role="button"
+                            <Link className="nav-link dropdown-toggle" to="/#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span className="mr-2 d-none d-lg-inline text-gray-600 small">Shashi Ojha</span>
                                 <img className = "img-profile rounded-circle"
@@ -169,20 +169,20 @@ return (
                             </Link>
                             <div className="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <Link className="dropdown-item" to="#">
+                                <Link className="dropdown-item" to="/#">
                                     <i className="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </Link>
-                                <Link className="dropdown-item" to="#">
+                                <Link className="dropdown-item" to="/#">
                                     <i className="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Settings
                                 </Link>
-                                <Link className="dropdown-item" to="#">
+                                <Link className="dropdown-item" to="/#">
                                     <i className="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Activity Log
                                 </Link>
                                 <div className="dropdown-divider"></div>
-                                <Link className="dropdown-item" to="#" data-toggle="modal" data-target="#logoutModal">
+                                <Link className="dropdown-item" to="/#" data-toggle="modal" data-target="#logoutModal">
                                     <i className="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </Link>

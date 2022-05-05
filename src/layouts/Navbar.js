@@ -5,7 +5,7 @@ export default function Navbar(props) {
     return (
         <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <Link className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+            <Link className="sidebar-brand d-flex align-items-center justify-content-center" to="/">
                 <div className="sidebar-brand-icon rotate-n-15">
                     <i className="fas fa-laugh-wink"></i>
                 </div>
@@ -27,7 +27,7 @@ export default function Navbar(props) {
             </div>
 
             <li className="nav-item">
-                <Link className="nav-link collapsed" to="#" data-toggle="collapse" data-target="#collapseTwo"
+                <Link className="nav-link collapsed" to="/#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i className="fas fa-fw fa-cog"></i>
                     <span>Employee List</span>
@@ -41,7 +41,7 @@ export default function Navbar(props) {
             </li>
 
             <li className="nav-item">
-                <Link className="nav-link collapsed" to="#" data-toggle="collapse" data-target="#collapseUtilities"
+                <Link className="nav-link collapsed" to="/#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i className="fas fa-fw fa-wrench"></i>
                     <span>Posts</span>
@@ -62,7 +62,7 @@ export default function Navbar(props) {
             </div>
 
             <li className="nav-item">
-                <Link className="nav-link collapsed" to="#" data-toggle="collapse" data-target="#collapsePages"
+                <Link className="nav-link collapsed" to="/#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i className="fas fa-fw fa-folder"></i>
                     <span>Learning Task</span>

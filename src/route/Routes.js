@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Switch, Route } from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Counter from '../components/counter/Counter';
 import Dashboard from '../components/Dashboard';
 import AddEmployee from '../components/employee/AddEmployee';
@@ -11,6 +11,8 @@ import Login from '../components/auth/Login';
 import ForgotPassword from '../components/auth/ForgotPassword';
 import { AllTickets } from '../components/tickets/AllTickets';
 import { Addticket } from '../components/tickets/Addticket';
+import Ticket from '../components/tickets/Ticket';
+import { PrivateRoute } from './PrivateRoute';
 
 export default function Routes() {
 
@@ -50,7 +52,8 @@ export default function Routes() {
     
   return (
 
-        <Switch>
+        <Router>    
+           <Switch>
             <Route exact path="/login">
                 <Login
                 handleOnChange = {handleOnChange} 
@@ -64,33 +67,38 @@ export default function Routes() {
                 handleOnResetSubmit = {handleOnResetSubmit}
                 email = {email} />
             </Route>
-            <Route exact path="/">
+            <PrivateRoute exact path = "/" >
                 <Dashboard />
-            </Route>
-            <Route exact path="/employee-list">
+            </PrivateRoute>
+            <PrivateRoute exact path="/employee-list">
                 <Employee />
-            </Route>
-            <Route exact path ='/add-employee'>
+            </PrivateRoute>
+            <PrivateRoute exact path ='/add-employee'>
                 <AddEmployee/>
-            </Route>
-            <Route exact path="/posts">
+            </PrivateRoute>
+            <PrivateRoute exact path="/posts">
                 <Posts heading="All Post List" />
-            </Route>
-            <Route exact path="/counter">
+            </PrivateRoute>
+            <PrivateRoute exact path="/counter">
                 <Counter/>
-            </Route>
-            <Route exact path="/text-editor">
+            </PrivateRoute>
+            <PrivateRoute exact path="/text-editor">
                 <TextForm heading="Enter the text to analysis" />
-            </Route>
-            <Route exact path = "/using-axios" >
+            </PrivateRoute>
+            <PrivateRoute exact path = "/using-axios" >
                 <Users heading="Using Axios"/>
-            </Route>
-            <Route exact path = "/all-tickets">
+            </PrivateRoute>
+            <PrivateRoute exact path = "/all-tickets">
                 <AllTickets heading="All Tickets"/>
-            </Route>
-            <Route exact path = "/add-new-ticket">
+            </PrivateRoute>
+            <PrivateRoute exact path = "/add-new-ticket">
                 <Addticket heading = "Add New Ticket" />
-            </Route>
+            </PrivateRoute>
+            <PrivateRoute exact path = "/ticket/:tId">
+                <Ticket/>
+            </PrivateRoute>
         </Switch>
+        </Router>
+        
   )
 }
